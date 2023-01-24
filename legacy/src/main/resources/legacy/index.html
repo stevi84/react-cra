@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Tutorial: Hello Dojo!</title>
+</head>
+<body>
+    <h1 id="greeting">Hello</h1>
+    <div style="padding: 12px">
+        <h1>this is part of the normal application, before the react element</h1>
+        <div id="counter"><!-- render react here --></div>
+        <h1>this is part of the normal application, after the react element</h1>
+        <p>
+            Want to see more? Join us at the <a href="/frontend/">/frontend</a>.
+        </p>
+    </div>
+    <script src="/frontend/static/js/main.js"></script>
+    <!-- load Dojo -->
+    <script src="//ajax.googleapis.com/ajax/libs/dojo/1.10.4/dojo/dojo.js"
+            data-dojo-config="async: true"></script>
+    <script>
+        require([
+            'dojo/dom',
+            'dojo/dom-construct'
+        ], function (dom, domConstruct) {
+            var greetingNode = dom.byId('greeting');
+            domConstruct.place('<em> Dojo!</em>', greetingNode);
+        });
+    </script>
+</body>
+</html>

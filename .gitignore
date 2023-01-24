@@ -1,0 +1,10 @@
+.idea
+backend/target
+backend/backend.iml
+frontend/target
+frontend/build
+frontend/frontend.iml
+frontend/node
+frontend/node_modules
+legacy/target
+legacy/legacy.iml
